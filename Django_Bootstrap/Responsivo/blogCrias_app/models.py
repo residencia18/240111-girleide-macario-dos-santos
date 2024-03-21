@@ -7,8 +7,14 @@ class Topic(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return self.text
+        return self.text, self.date_added
 
+class Email(models.Model):
+    mail = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.mail
+    
 class Entry(models.Model):
     # assunto relacionado ao tópico
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)

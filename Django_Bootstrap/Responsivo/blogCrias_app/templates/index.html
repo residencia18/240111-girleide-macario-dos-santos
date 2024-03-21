@@ -1,4 +1,8 @@
-{%extends 'base.html'%}
+{% extends 'base.html' %}
 {% block content %}
-    <h1></h1>
+{% for item in text %}
+    <li>{{ item }}</li>
+{% empty %}
+    <li>Ainda não há nada cadastrado</li>
+{% endfor %}
 {% endblock content %}
