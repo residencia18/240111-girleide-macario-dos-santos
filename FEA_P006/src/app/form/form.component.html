@@ -1,0 +1,8 @@
+<form>
+    <div *ngFor="let field of camposDoForm">
+      <label>{{ field.label }}</label>
+      <input [type]="field.type" [name]="field.name" />
+    </div>
+    <button type="submit">Enviar</button>
+</form>
+  
